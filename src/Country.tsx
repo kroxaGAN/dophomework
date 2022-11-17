@@ -1,6 +1,7 @@
 import React from 'react';
 import {City} from "./City";
 import {BanknotsType, MoneyType} from "./App";
+import styled from "styled-components";
 
 type CountryPropsType = {
     data: MoneyType[]
@@ -26,11 +27,17 @@ export const Country = (props: CountryPropsType) => {
 
     return (
         <div>
-            <button onClick={()=>setAll("All")}>All</button>
-            <button onClick={()=>setDollars("Dollars")}>Dollars</button>
-            <button onClick={()=>setRUBLS("RUBLS")}>RUBLS</button>
+            <FilterButton onClick={()=>setAll("All")}>All</FilterButton>
+            <FilterButton onClick={()=>setDollars("Dollars")}>Dollars</FilterButton>
+            <FilterButton onClick={()=>setRUBLS("RUBLS")}>RUBLS</FilterButton>
             <City data={props.data}/>
         </div>
     );
 };
 
+const FilterButton = styled.button`
+  background-color: burlywood;
+  width: 100px;
+  height: 35px;
+  margin: 10px;
+`

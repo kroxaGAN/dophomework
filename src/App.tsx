@@ -33,12 +33,10 @@ function App() {
     // убираем заглушки в типизации и вставляем в качестве инициализационного значения defaultMoney
     // const [ money, setMoney] = useState<MoneyType[]>([])
     const [filter, setFilter] = useState<BanknotsType>('All')   // по умолчанию указываем все банкноты
-    console.log(filter)
 
     // а вот сейчас притормаживаем. И вдумчиво: константа filteredMoney получает результат функции moneyFilter
     // в функцию передаем деньги и фильтр, по которому ихбудем выдавать(ретёрнуть)
     const filteredMoney = moneyFilter(defaultMoney, filter)
-    console.log(filteredMoney)
     return (
         <div className="App">
             <Country
