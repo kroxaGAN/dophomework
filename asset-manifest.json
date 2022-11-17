@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dophomework/static/css/main.073c9b0a.css",
+    "main.js": "/dophomework/static/js/main.8383287d.js",
+    "static/js/787.fd538830.chunk.js": "/dophomework/static/js/787.fd538830.chunk.js",
+    "index.html": "/dophomework/index.html",
+    "main.073c9b0a.css.map": "/dophomework/static/css/main.073c9b0a.css.map",
+    "main.8383287d.js.map": "/dophomework/static/js/main.8383287d.js.map",
+    "787.fd538830.chunk.js.map": "/dophomework/static/js/787.fd538830.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.8383287d.js"
+  ]
+}
