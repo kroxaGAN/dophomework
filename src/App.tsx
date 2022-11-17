@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Country} from "./Country";
+import {log} from "util";
 
 export type BanknotsType ='Dollars' | 'RUBLS' | 'All' // создадим типы для banknotes -он может быть 'Dollars', 'RUBLS' или 'All'
 export type MoneyType = {
@@ -24,19 +25,20 @@ let defaultMoney: MoneyType[] = [  // типизируем
 export const moneyFilter = (money: MoneyType[], filter: BanknotsType): MoneyType[] => {
     //если пришел filter со значением 'All', то возвращаем все банкноты
     //return money.filter... ну да, придется фильтровать
-    if(filter==='All') return money
+    if(filter==='All') return defaultMoney
     return money.filter(el=>el.banknotes===filter)
 }
 
 function App() {
     // убираем заглушки в типизации и вставляем в качестве инициализационного значения defaultMoney
-    const [money, setMoney] = useState<MoneyType[]>([])
+    // const [ money, setMoney] = useState<MoneyType[]>([])
     const [filter, setFilter] = useState<BanknotsType>('All')   // по умолчанию указываем все банкноты
     console.log(filter)
 
     // а вот сейчас притормаживаем. И вдумчиво: константа filteredMoney получает результат функции moneyFilter
     // в функцию передаем деньги и фильтр, по которому ихбудем выдавать(ретёрнуть)
     const filteredMoney = moneyFilter(defaultMoney, filter)
+    console.log(filteredMoney)
     return (
         <div className="App">
             <Country
